@@ -214,7 +214,7 @@ h3,p {
   }
 
   .µ\:outerMargin-top {
-    padding-top: 5rem;
+    padding-top: 5.5rem;
     padding-bottom: 2rem;
   }
 
@@ -237,7 +237,7 @@ h3,p {
   }
 
   .release-comment {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .µ\:before\:horizontal-line:before {
@@ -338,6 +338,10 @@ h3,p {
   .md\:before\:mx-auto:before {
     content: var(--tw-content);
     margin-right: auto;
+  }
+
+  .release-comment {
+    font-size: 12px;
   }
 
   .md\:before\:mx-0:before {
