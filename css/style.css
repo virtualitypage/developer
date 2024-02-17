@@ -4,7 +4,6 @@ body
 
 @import url("https://fonts.googleapis.com/css2?family=Epilogue&display=swap");
 html {
-  font-size: 62.5%;
   letter-spacing: 0.03em;
   /* line-height: 1.3rem; */
 }
@@ -56,8 +55,10 @@ header
 
 .logo {
   width: 100px;
+  padding-top: 7px;
   padding-left: 10px;
 }
+
 @media screen and (min-width: 940px) {
   .logo {
     width: 200px;
@@ -69,7 +70,7 @@ header
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  margin: 8px;
 }
 
 .nav {
@@ -145,7 +146,7 @@ a:-webkit-any-link {
   background: rgb(240, 103, 255);
   position: absolute;
   right: 2rem;
-  top: 1.7rem;
+  top: 21.5px;
 }
 @media screen and (min-width: 940px) {
   .nav__toggle {
@@ -165,16 +166,34 @@ main {
   display: block;
   /*IE*/
 }
+
 .main-contents {
   padding-top: 35px;
   overflow: hidden;
 }
+
+.line-break {
+  display: block; /* 画面サイズによって改行の有無を変更可能 ※「none」で無効化*/
+}
+
+.line-break_reverse {
+  display: none; /* 改行を無効化 */
+}
+
 @media screen and (min-width: 769px) {
   .main-contents {
     padding-top: 150px;
     padding-left: 20px;
     padding-right: 20px;
     overflow: hidden;
+  }
+
+  .line-break {
+    display: none; /* 改行を無効化 */
+  }
+
+  .line-break_reverse {
+    display: block; /* 改行を有効化 */
   }
 }
 
@@ -332,24 +351,44 @@ mapArea
 }
 
 /* =========================================================
-information bottom
+information button
 ========================================================= */
 
-.content-bottom {
+.contentButton_upperSide {
   font-weight: bold;
   text-align: center;
-  margin:auto;
+  margin: auto;
   justify-content: space-evenly;
-  padding-top: 25px;
   position: relative;
 }
 
 @media screen and (min-width: 769px) {
-  .content-bottom {
+  .contentButton_upperSide {
     text-align: center;
-    margin:auto;
+    margin: auto;
     justify-content: space-evenly;
-    padding-top: 20px;
+    position: relative;
+  }
+}
+
+.contentButton_underSide {
+  font-weight: bold;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+@media screen and (min-width: 769px) {
+  .contentButton_underSide {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    justify-content: space-evenly;
     position: relative;
   }
 }
@@ -400,6 +439,39 @@ information bottom
   border: solid 2px #563096;
   border-top: solid 2px #bc96ff;
 }
+
+.btn-smile {
+  font-weight: bold;
+  font-size: 13px;
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background-color: rgb(1, 211, 189);
+  color: #ffffff;
+  border: solid 2px rgb(0, 159, 143);
+  border-top: solid 2px rgb(203, 255, 250);
+  top:-20%;
+  right:-20%;
+  bottom:-20%;
+  left:-20%;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  overflow: hidden;
+  /* box-shadow: 0px 0px 20px 2px rgba(255,184,78,.6), 0px 0px 30px 2px rgba(1, 211, 189,.4); 金色仕上げ */
+  box-shadow: 0px 0px 20px 2px rgba(1, 211, 189, 0.6), 0px 0px 30px 2px rgba(1, 211, 189, 0.5);
+  animation-name: rotate;
+  animation-duration: s; /* アニメーション周期所要時間。単位は秒(s)またはミリ秒(ms) */
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; /* 無限に繰り返す */
+  animation-direction: normal; /* reverse => 逆方向 | normal => 順方向 */
+  animation-play-state: running;
+}
+@keyframes rotate {
+  to {
+    transform: rotate(10turn);
+  }
+}
+
 .btn-play-form:hover {
   background-color: #673ab7;
 }
@@ -420,6 +492,32 @@ information bottom
     border: solid 2px #563096;
     border-top: solid 2px #bc96ff;
   }
+  .btn-smile {
+    font-weight: bold;
+    font-size: 13px;
+    display: inline-block;
+    padding: 0.5em 8em;
+    text-decoration: none;
+    background-color: rgb(1, 211, 189);
+    color: #ffffff;
+    border: solid 2px rgb(0, 159, 143);
+    border-top: solid 2px rgb(203, 255, 250);
+    top:-20%;
+    right:-20%;
+    bottom:-20%;
+    left:-20%;
+    -webkit-mask-size: 100%;
+    mask-size: 100%;
+    overflow: hidden;
+    /* box-shadow: 0px 0px 20px 2px rgba(255,184,78,.6), 0px 0px 30px 2px rgba(1, 211, 189,.4); 金色仕上げ */
+    box-shadow: 0px 0px 20px 2px rgba(1, 211, 189, 0.6), 0px 0px 30px 2px rgba(1, 211, 189, 0.5);
+    animation-name: rotate;
+    animation-duration: s; /* アニメーション周期所要時間。単位は秒(s)またはミリ秒(ms) */
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; /* 無限に繰り返す */
+    animation-direction: normal; /* reverse => 逆方向 | normal => 順方向 */
+    animation-play-state: running;
+  }
 }
 
 article {
@@ -428,7 +526,7 @@ article {
 
 @media screen and (min-width: 769px) {
   article {
-    padding: 7% 0;
+    padding: 3% 0;
   }
 }
 
@@ -437,7 +535,7 @@ neon
 ========================================================= */
 
 x-sign {
-  --interval: 1s;
+  --interval: 3s;
   display: block;
   text-shadow:
     0 0 10px var(--color1),

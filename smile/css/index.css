@@ -4,7 +4,6 @@ body
 
 @import url("https://fonts.googleapis.com/css2?family=Epilogue&display=swap");
 html {
-  font-size: 62.5%;
   letter-spacing: 0.03em;
   /* line-height: 1.3rem; */
 }
@@ -145,7 +144,7 @@ a:-webkit-any-link {
   background: rgb(4, 255, 229);
   position: absolute;
   right: 2rem;
-  top: 1.7rem;
+  top: 21.5px;
 }
 @media screen and (min-width: 940px) {
   .nav__toggle {
