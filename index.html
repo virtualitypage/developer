@@ -68,25 +68,19 @@
           <img src="./img/map.jpg" alt="locale MAP">
         </div>
       </div>
+      <br>
+      <marquee id="information"></marquee>
       <article>
-        <table class="contentButton_upperSide">
+        <table class="contentButton">
           <tr>
-            <td>
-              <a class="btn-play-info" onclick="information()">インフォメーション</a>
-            </td>
-            <td>
-              <p>　　　</p>
-            </td>
             <td>
               <a class="btn-play-form" onclick="googleForm()">御意見頂戴フォーム</a>
             </td>
-          </tr>
-        </table>
-        <br>
-        <table class="contentButton_underSide">
-          <tr>
             <td>
-              <a class="btn-smile" href="./smile/index">══❚█ SMILE █❚══</a>
+              <p>　　</p>
+            </td>
+            <td>
+              <a class="btn-smile" href="./smile/index">❚█═ SMILE ═❚█</a>
             </td>
           </tr>
         </table>
@@ -619,4 +613,11 @@
     }
     setInterval(createSnow, 300); // 雪が発生する間隔をミリ秒で指定
   });
+  function information(){
+    var marquee = document.getElementById("information");
+    let today = new Date();
+    let date = today.toLocaleDateString();
+    marquee.textContent = date + " 現在、最新情報はありません";
+  }
+  information();
 </script>
