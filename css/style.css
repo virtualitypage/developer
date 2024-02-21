@@ -398,7 +398,6 @@ article {
   box-shadow: 0px 0px 0px 2px #fff;
 }
 
-
 @media screen and (min-width: 769px) {
   marquee {
     color: rgb(255 255 255);
@@ -456,26 +455,57 @@ article {
 }
 
 /* =========================================================
-storeList
+shop list
 ========================================================= */
 
-.storeArea {
+.shop-group {
   max-width: 92%;
   margin: 0 auto;
 }
 
-@media screen and (min-width: 769px) {
-  .storeArea {
-    max-width: 1080px;
-    margin: 0 auto;
-  }
-  .storeArea .storeList li {
-    margin-right: 0.925%;
-    width: 19.26%;
-  }
-  .storeArea .storeList li:nth-child(5n) {
-    margin-right: 0;
-  }
+.shop-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.shop-list li {
+  margin-right: 4.348%;
+  margin-bottom: 7vw;
+  width: 47.826%;
+}
+
+.shop-list li:nth-child(2n) {
+  margin-right: 0;
+}
+
+.shop-list li a:hover {
+  opacity: 0.8;
+}
+
+.shop-list li dl {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px 7px 0;
+}
+
+.shop-list li dl dt {
+  color: #fff; /* 通常 */
+  /* color: orange; */ /* ハロウィン仕様 */
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 3px;
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+}
+
+.shop-list li dl dd {
+  background-color: #0000ff;
+  color: #fff;
+  font-size: 11px;
+  margin: 0 4px 4px 0;
+  padding: 5px 10px;
 }
 
 .line-break {
@@ -486,65 +516,14 @@ storeList
   display: none; /* 改行を無効化 */
 }
 
-@media screen and (min-width: 769px) {
-  .line-break {
-    display: none; /* 改行を無効化 */
-  }
-
-  .line-break_reverse {
-    display: block; /* 改行を有効化 */
-  }
-}
-
-.storeList {
-  display: flex;
-  flex-wrap: wrap;
-}
-.storeList li {
-  margin-right: 4.348%;
-  margin-bottom: 7vw;
-  width: 47.826%;
-}
-.storeList li:nth-child(2n) {
-  margin-right: 0;
-}
-.storeList li a {
-  display: block;
-  text-decoration: none;
-}
-.storeList li a:hover {
-  opacity: 0.8;
-}
-.storeList li dl {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 10px 7px 0;
-}
-.storeList li dl dt {
-  color: #fff; /* 通常 */
-  /* color: orange; */ /* ハロウィン仕様 */
-  font-size: 20px;
-  line-height: 1.6;
-  margin-bottom: 3px;
-  text-align: center;
-  width: 100%;
-  font-weight: bold;
-}
-.storeList li dl dd {
-  background-color: #0000ff;
-  color: #fff;
-  font-size: 11px;
-  margin: 0 4px 4px 0;
-  padding: 5px 10px;
-}
-.ddd {
+.caution {
   background-color: #ff0000;
   color: #fff;
   font-size: 11px;
   margin: 0 4px 4px 0;
   padding: 5px 10px;
 }
+
 .update {
   background-color: #1bca00;
   color: #fff;
@@ -554,19 +533,44 @@ storeList
 }
 
 @media screen and (min-width: 769px) {
-  .storeList li {
+  .shop-group {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  .shop-group .shop-list li {
+    margin-right: 0.925%;
+    width: 19.26%;
+  }
+
+  .shop-group .shop-list li:nth-child(5n) {
+    margin-right: 0;
+  }
+
+  .shop-list li {
     margin-bottom: 25px;
   }
-  .storeList li dl {
+
+  .shop-list li dl {
     padding: 5px 7px 0;
   }
-  .storeList li dl dt {
+
+  .shop-list li dl dt {
     font-size: 20px;
     margin-bottom: 5px;
     font-weight: bold;
   }
-  .storeList li dl dd {
+
+  .shop-list li dl dd {
     padding: 6px 12px 5px;
+  }
+
+  .line-break {
+    display: none; /* 改行を無効化 */
+  }
+
+  .line-break_reverse {
+    display: block; /* 改行を有効化 */
   }
 }
 
@@ -578,7 +582,8 @@ footer {
   padding: 8px 0 30px;
   text-align: center;
 }
-footer .copy {
+
+footer .foot {
   color: #fff;
   font-family: 'Epilogue', sans-serif;
   font-size: 14px;
