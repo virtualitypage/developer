@@ -138,45 +138,6 @@ span {
 }
 
 /* =========================================================
-main
-========================================================= */
-
-main {
-  display: block;
-  /*IE*/
-}
-
-.main-contents {
-  padding-top: 35px;
-  overflow: hidden;
-}
-
-.line-break {
-  display: block; /* 画面サイズによって改行の有無を変更可能 ※「none」で無効化*/
-}
-
-.line-break_reverse {
-  display: none; /* 改行を無効化 */
-}
-
-@media screen and (min-width: 769px) {
-  .main-contents {
-    padding-top: 150px;
-    padding-left: 20px;
-    padding-right: 20px;
-    overflow: hidden;
-  }
-
-  .line-break {
-    display: none; /* 改行を無効化 */
-  }
-
-  .line-break_reverse {
-    display: block; /* 改行を有効化 */
-  }
-}
-
-/* =========================================================
 animation
 ========================================================= */
 
@@ -205,126 +166,132 @@ animation
 }
 
 /* =========================================================
-infoArea
+neon
 ========================================================= */
 
-.infoArea {
+x-sign {
+  --interval: 3s;
+  display: block;
+  text-shadow:
+    0 0 10px var(--color1),
+    0 0 20px var(--color2),
+    0 0 40px var(--color3),
+    0 0 80px var(--color4);
+  will-change: filter, color;
+  filter: saturate(60%);
+  animation: flicker steps(100) var(--interval) 1s infinite;
+}
+
+x-sign {
+  font-weight: bold;
+  font-size: 25px;
+  margin: 20px auto;
+  color: yellow;
+  --color1: yellow;
+  --color2: lime;
+  --color3: green;
+  --color4: darkgreen;
+  font-family: Monoton;
+}
+
+@keyframes flicker {
+  50% {
+    color: white;
+    filter: saturate(200%) hue-rotate(20deg);
+  }
+}
+
+@media screen and (min-width: 769px) {
+  x-sign {
+    --interval: 1s;
+    display: block;
+    text-shadow:
+      0 0 10px var(--color1),
+      0 0 20px var(--color2),
+      0 0 40px var(--color3),
+      0 0 80px var(--color4);
+    will-change: filter, color;
+    filter: saturate(60%);
+    animation: flicker steps(100) var(--interval) 1s infinite;
+  }
+  x-sign {
+    font-weight: bold;
+    font-size: 30px;
+    margin: 20px auto 30px;
+    color: yellow;
+    --color1: yellow;
+    --color2: lime;
+    --color3: green;
+    --color4: darkgreen;
+    font-family: Monoton;
+  }
+
+  @keyframes flicker {
+    50% {
+      color: white;
+      filter: saturate(200%) hue-rotate(20deg);
+    }
+  }
+}
+
+/* =========================================================
+main
+========================================================= */
+
+main {
+  padding-top: 35px;
+  overflow: hidden;
+}
+
+.introduction {
   margin: 10% auto 0;
   width: 100%;
   /* padding: 0 0 20vw; */
   position: relative;
 }
-.infoArea:before {
-  background: url("../images/anime01.gif") no-repeat 0 0;
-  background-size: 100%;
-  content: "";
-  height: 52vw;
-  display: block;
-  position: absolute;
-  bottom: 7vw;
-  left: -2vw;
-  width: 50.6vw;
-}
-.infoArea:after {
-  background: url("../images/anime02.gif") no-repeat 0 0;
-  background-size: 100%;
-  content: "";
-  height: 60vw;
-  display: block;
-  position: absolute;
-  bottom: 0;
-  right: -12vw;
-  width: 64vw;
-}
-.infoArea .subTitle {
-  margin: 0 auto 15px;
-  width: 33.6vw;
-}
-.infoArea h2 {
-  margin: 0 auto 24px;
-  width: 66.13vw;
-}
-.infoArea p {
+
+.introduction p {
   color: #fff;
   font-size: 10px;
   line-height: 1.8;
   text-align: center;
   font-weight: bold;
 }
-.infoArea p .pc {
-  display: none;
-}
 
-@media screen and (min-width: 769px) {
-  .infoArea {
-    margin: -60px auto -30px;
-    padding: 55px 0 5px;
-  }
-  .infoArea:before {
-    height: 397px;
-    top: -13px;
-    left: -245px;
-    bottom: auto;
-    width: 386px;
-  }
-  .infoArea:after {
-    height: 414px;
-    top: -16px;
-    right: -322px;
-    bottom: auto;
-    width: 474px;
-  }
-  .infoArea .subTitle {
-    margin: 0 auto 25px;
-    width: 180px;
-  }
-  .infoArea h2 {
-    margin: 0 auto 40px;
-    width: 390px;
-  }
-  .infoArea p {
-    line-height: 2.2;
-    font-size: 15px;
-    font-weight: bold;
-  }
-  .infoArea p .sp {
-    display: none;
-  }
-  .infoArea p .pc {
-    display: inline-block;
-  }
-}
-
-/* =========================================================
-mapArea
-========================================================= */
-
-.mapArea {
+.hero {
   max-width: 800px;
   margin: 5vw auto 0vw;
 }
-.mapArea h2 {
-  margin: 0 auto 10vw;
-}
-.mapArea h2 img {
-  height: 7.4vw;
-}
-.mapArea .map {
+
+.hero .map {
   margin: 0 auto;
   width: 92%;
 }
 
 @media screen and (min-width: 769px) {
-  .mapArea {
+  main {
+    padding-top: 150px;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow: hidden;
+  }
+
+  .introduction {
+    margin: -60px auto -30px;
+    padding: 55px 0 5px;
+  }
+
+  .introduction p {
+    line-height: 2.2;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .hero {
     margin: 75px auto 5px;
   }
-  .mapArea h2 {
-    margin: 0 auto 30px;
-  }
-  .mapArea h2 img {
-    height: 27px;
-  }
-  .mapArea .map {
+
+  .hero .map {
     width: 666px;
   }
 }
@@ -506,77 +473,27 @@ article {
 }
 
 /* =========================================================
-neon
+storeList
 ========================================================= */
 
-x-sign {
-  --interval: 3s;
-  display: block;
-  text-shadow:
-    0 0 10px var(--color1),
-    0 0 20px var(--color2),
-    0 0 40px var(--color3),
-    0 0 80px var(--color4);
-  will-change: filter, color;
-  filter: saturate(60%);
-  animation: flicker steps(100) var(--interval) 1s infinite;
+
+.line-break {
+  display: block; /* 画面サイズによって改行の有無を変更可能 ※「none」で無効化*/
 }
 
-x-sign {
-  font-weight: bold;
-  font-size: 25px;
-  margin: 20px auto;
-  color: yellow;
-  --color1: yellow;
-  --color2: lime;
-  --color3: green;
-  --color4: darkgreen;
-  font-family: Monoton;
-}
-
-@keyframes flicker {
-  50% {
-    color: white;
-    filter: saturate(200%) hue-rotate(20deg);
-  }
+.line-break_reverse {
+  display: none; /* 改行を無効化 */
 }
 
 @media screen and (min-width: 769px) {
-  x-sign {
-    --interval: 1s;
-    display: block;
-    text-shadow:
-      0 0 10px var(--color1),
-      0 0 20px var(--color2),
-      0 0 40px var(--color3),
-      0 0 80px var(--color4);
-    will-change: filter, color;
-    filter: saturate(60%);
-    animation: flicker steps(100) var(--interval) 1s infinite;
-  }
-  x-sign {
-    font-weight: bold;
-    font-size: 30px;
-    margin: 20px auto 30px;
-    color: yellow;
-    --color1: yellow;
-    --color2: lime;
-    --color3: green;
-    --color4: darkgreen;
-    font-family: Monoton;
+  .line-break {
+    display: none; /* 改行を無効化 */
   }
 
-  @keyframes flicker {
-    50% {
-      color: white;
-      filter: saturate(200%) hue-rotate(20deg);
-    }
+  .line-break_reverse {
+    display: block; /* 改行を有効化 */
   }
 }
-
-/* =========================================================
-storeList
-========================================================= */
 
 .storeList {
   display: flex;
@@ -636,17 +553,18 @@ storeList
 }
 
 /* 通常 */
-code-p[class] {
+.cm-s-default {
   color: white;
   text-shadow: 0 0 2px #100c0f,0 0 35px #ffffff44,0 0 5px white,0 0 2px white;
 }
+
 code[class] {
   color: white;
   text-shadow: 0 0 2px #100c0f,0 0 35px #ffffff44,0 0 5px white,0 0 2px white;
 }
 
 /* ハロウィン仕様 */
-/* code-p[class] {
+/* .cm-s-default {
   color: rgb(255, 123, 0);
   text-shadow: 0 0 20px rgb(255, 123, 0),0 0 35px rgb(255, 123, 0),0 0 5px rgb(255, 123, 0),0 0 50px darkorange;
 }
