@@ -243,6 +243,27 @@ main {
   overflow: hidden;
 }
 
+/* 通常 */
+.cm-s-default {
+  color: white;
+  text-shadow: 0 0 2px #100c0f,0 0 35px #ffffff44,0 0 5px white,0 0 2px white;
+}
+
+code[class] {
+  color: white;
+  text-shadow: 0 0 2px #100c0f,0 0 35px #ffffff44,0 0 5px white,0 0 2px white;
+}
+
+/* ハロウィン仕様 */
+/* .cm-s-default {
+  color: rgb(255, 123, 0);
+  text-shadow: 0 0 20px rgb(255, 123, 0),0 0 35px rgb(255, 123, 0),0 0 5px rgb(255, 123, 0),0 0 50px darkorange;
+}
+code[class] {
+  color: rgb(255, 123, 0);
+  text-shadow: 0 0 20px rgb(255, 123, 0),0 0 35px rgb(255, 123, 0),0 0 5px rgb(255, 123, 0),0 0 50px darkorange;
+} */
+
 .introduction {
   margin: 10% auto 0;
   width: 100%;
@@ -297,7 +318,7 @@ main {
 }
 
 /* =========================================================
-information button
+information
 ========================================================= */
 
 marquee {
@@ -308,17 +329,12 @@ marquee {
   font-weight: bold;
   font-size: 15px;
 }
-@media screen and (min-width: 769px) {
-  marquee {
-    color: rgb(255 255 255);
-    background-color: rgb(155 0 255 / 0.5);
-    margin-top: 10px;
-    padding: 10px;
-    font-weight: bold;
-    font-size: 20px;
-  }
+
+article {
+  padding: 7% 0;
 }
-.contentButton {
+
+.btn-group {
   font-weight: bold;
   text-align: center;
   margin: auto;
@@ -326,50 +342,7 @@ marquee {
   position: relative;
 }
 
-@media screen and (min-width: 769px) {
-  .contentButton {
-    text-align: center;
-    margin: auto;
-    justify-content: space-evenly;
-    position: relative;
-  }
-}
-
-.btn-play-info {
-  font-weight: bold;
-  font-size: 13px;
-  display: inline-block;
-  padding: 0.5em 1em;
-  text-decoration: none;
-  background-color: #00bde3;
-  box-shadow: 0px 0px 0px 2px #0a0a0a;
-  color: #fff;
-  border: solid 2px #017c92;
-  border-top: solid 2px #bdf4ff;
-}
-.btn-play-info:hover {
-  background-color: #00d4ff;
-}
-.btn-play-info:active {
-  box-shadow: 0px 0px 0px 2px #fff;
-}
-
-@media screen and (min-width: 769px) {
-  .btn-play-info {
-    font-weight: bold;
-    font-size: 13px;
-    display: inline-block;
-    padding: 0.5em 8em;
-    text-decoration: none;
-    background-color: #00bde3;
-    box-shadow: 0px 0px 0px 2px #0a0a0a;
-    color: #fff;
-    border: solid 2px #017c92;
-    border-top: solid 2px #bdf4ff;
-  }
-}
-
-.btn-play-form {
+.btn-form {
   font-weight: bold;
   font-size: 13px;
   display: inline-block;
@@ -382,7 +355,15 @@ marquee {
   border-top: solid 2px #bc96ff;
 }
 
-.btn-smile {
+.btn-form:hover {
+  background-color: #673ab7;
+}
+
+.btn-form:active {
+  box-shadow: 0px 0px 0px 2px #fff;
+}
+
+.btn-another_site {
   font-weight: bold;
   font-size: 13px;
   display: inline-block;
@@ -392,41 +373,58 @@ marquee {
   color: #ffffff;
   border: solid 2px rgb(0, 159, 143);
   border-top: solid 2px rgb(203, 255, 250);
-  top:-20%;
-  right:-20%;
-  bottom:-20%;
-  left:-20%;
-  -webkit-mask-size: 100%;
-  mask-size: 100%;
   /* overflow: hidden; */
   /* box-shadow: 0px 0px 20px 2px rgba(255,184,78,.6), 0px 0px 30px 2px rgba(1, 211, 189,.4); 金色仕上げ */
   box-shadow: 0px 0px 20px 2px rgba(1, 211, 189, 0.6), 0px 0px 30px 2px rgba(1, 211, 189, 0.5);
   animation-name: rotate;
-  animation-duration: s; /* アニメーション周期所要時間。単位は秒(s)またはミリ秒(ms) */
+  animation-duration: 0s; /* アニメーション周期所要時間。単位は秒(s)またはミリ秒(ms) */
   animation-timing-function: linear;
   animation-iteration-count: infinite; /* 無限に繰り返す */
   animation-direction: normal; /* reverse => 逆方向 | normal => 順方向 */
   animation-play-state: running;
 }
+
 @keyframes rotate {
   to {
     transform: rotate(10turn);
   }
 }
 
-.btn-play-form:hover {
+.btn-another_site:hover {
   background-color: #673ab7;
 }
-.btn-play-form:active {
+
+.btn-another_site:active {
   box-shadow: 0px 0px 0px 2px #fff;
 }
 
+
 @media screen and (min-width: 769px) {
-  .btn-play-form {
+  marquee {
+    color: rgb(255 255 255);
+    background-color: rgb(155 0 255 / 0.5);
+    margin-top: 10px;
+    padding: 10px;
     font-weight: bold;
-    font-size: 13px;
+    font-size: 20px;
+  }
+
+  article {
+    padding: 3% 0;
+  }
+
+  .btn-group {
+    text-align: center;
+    margin: auto;
+    justify-content: space-evenly;
+    position: relative;
+  }
+
+  .btn-form {
+    font-weight: bold;
+    font-size: 14px;
     display: inline-block;
-    padding: 0.5em 8em;
+    padding: 0.5em 7em;
     text-decoration: none;
     background-color: #673ab7;
     box-shadow: 0px 0px 0px 2px #0a0a0a;
@@ -434,22 +432,17 @@ marquee {
     border: solid 2px #563096;
     border-top: solid 2px #bc96ff;
   }
-  .btn-smile {
+
+  .btn-another_site {
     font-weight: bold;
-    font-size: 13px;
+    font-size: 14px;
     display: inline-block;
-    padding: 0.5em 8em;
+    padding: 0.5em 7em;
     text-decoration: none;
     background-color: rgb(1, 211, 189);
     color: #ffffff;
     border: solid 2px rgb(0, 159, 143);
     border-top: solid 2px rgb(203, 255, 250);
-    top:-20%;
-    right:-20%;
-    bottom:-20%;
-    left:-20%;
-    -webkit-mask-size: 100%;
-    mask-size: 100%;
     /* overflow: hidden; */
     /* box-shadow: 0px 0px 20px 2px rgba(255,184,78,.6), 0px 0px 30px 2px rgba(1, 211, 189,.4); 金色仕上げ */
     box-shadow: 0px 0px 20px 2px rgba(1, 211, 189, 0.6), 0px 0px 30px 2px rgba(1, 211, 189, 0.5);
@@ -462,20 +455,28 @@ marquee {
   }
 }
 
-article {
-  padding: 7% 0;
-}
-
-@media screen and (min-width: 769px) {
-  article {
-    padding: 3% 0;
-  }
-}
-
 /* =========================================================
 storeList
 ========================================================= */
 
+.storeArea {
+  max-width: 92%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 769px) {
+  .storeArea {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  .storeArea .storeList li {
+    margin-right: 0.925%;
+    width: 19.26%;
+  }
+  .storeArea .storeList li:nth-child(5n) {
+    margin-right: 0;
+  }
+}
 
 .line-break {
   display: block; /* 画面サイズによって改行の有無を変更可能 ※「none」で無効化*/
@@ -552,27 +553,6 @@ storeList
   padding: 5px 10px;
 }
 
-/* 通常 */
-.cm-s-default {
-  color: white;
-  text-shadow: 0 0 2px #100c0f,0 0 35px #ffffff44,0 0 5px white,0 0 2px white;
-}
-
-code[class] {
-  color: white;
-  text-shadow: 0 0 2px #100c0f,0 0 35px #ffffff44,0 0 5px white,0 0 2px white;
-}
-
-/* ハロウィン仕様 */
-/* .cm-s-default {
-  color: rgb(255, 123, 0);
-  text-shadow: 0 0 20px rgb(255, 123, 0),0 0 35px rgb(255, 123, 0),0 0 5px rgb(255, 123, 0),0 0 50px darkorange;
-}
-code[class] {
-  color: rgb(255, 123, 0);
-  text-shadow: 0 0 20px rgb(255, 123, 0),0 0 35px rgb(255, 123, 0),0 0 5px rgb(255, 123, 0),0 0 50px darkorange;
-} */
-
 @media screen and (min-width: 769px) {
   .storeList li {
     margin-bottom: 25px;
@@ -587,29 +567,6 @@ code[class] {
   }
   .storeList li dl dd {
     padding: 6px 12px 5px;
-  }
-}
-
-/* =========================================================
-storeArea
-========================================================= */
-
-.storeArea {
-  max-width: 92%;
-  margin: 0 auto;
-}
-
-@media screen and (min-width: 769px) {
-  .storeArea {
-    max-width: 1080px;
-    margin: 0 auto;
-  }
-  .storeArea .storeList li {
-    margin-right: 0.925%;
-    width: 19.26%;
-  }
-  .storeArea .storeList li:nth-child(5n) {
-    margin-right: 0;
   }
 }
 
