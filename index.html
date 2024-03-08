@@ -534,26 +534,26 @@
   </body>
 </html>
 
-<!-- <script>
+<script>
   // 雪が降るコード
-  window.addEventListener('DOMContentLoaded', () => {
-    const section = document.querySelector('.snow-container'); // コンテナを指定
-    const createSnow = () => { // 雪を生成する関数
-      const snowEl = document.createElement('span');
-      snowEl.className = 'snow';
-      const minSize = 5;
-      const maxSize = 15;
-      const size = Math.random() * (maxSize + 1 - minSize) + minSize;
-      snowEl.style.width = `${size}px`;
-      snowEl.style.height = `${size}px`;
-      snowEl.style.left = Math.random() * innerWidth + 'px';
-      section.appendChild(snowEl);
-      setTimeout(() => { // 一定時間が経てば雪を消す
-        snowEl.remove();
-      }, 20000);
-    }
-    setInterval(createSnow, 300); // 雪が発生する間隔をミリ秒で指定
-  });
+  // window.addEventListener('DOMContentLoaded', () => {
+  //   const section = document.querySelector('.snow-container'); // コンテナを指定
+  //   const createSnow = () => { // 雪を生成する関数
+  //     const snowEl = document.createElement('span');
+  //     snowEl.className = 'snow';
+  //     const minSize = 5;
+  //     const maxSize = 15;
+  //     const size = Math.random() * (maxSize + 1 - minSize) + minSize;
+  //     snowEl.style.width = `${size}px`;
+  //     snowEl.style.height = `${size}px`;
+  //     snowEl.style.left = Math.random() * innerWidth + 'px';
+  //     section.appendChild(snowEl);
+  //     setTimeout(() => { // 一定時間が経てば雪を消す
+  //       snowEl.remove();
+  //     }, 20000);
+  //   }
+  //   setInterval(createSnow, 300); // 雪が発生する間隔をミリ秒で指定
+  // });
   function information(){
     var marquee = document.getElementById("information");
     let today = new Date();
@@ -561,4 +561,4 @@
     marquee.textContent = date + " 現在、最新情報はありません";
   }
   information();
-</script> -->
+</script>

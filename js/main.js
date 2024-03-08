@@ -30,12 +30,6 @@ signs.forEach(el => {
   })
 })
 
-function information() {
-  let date = new Date();
-  // alert(date.toLocaleDateString() + "現在、最新情報はありません");
-  alert(date.toLocaleDateString() + "現在、諸事情につきサイトの更新を停止しています");
-}
-
 function googleForm() {
   window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLScus2uKaA49bYkh8O_s9HtEL8Tr1ohcgqLVGkKVCR3bzgAZQA/viewform';
 }
