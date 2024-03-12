@@ -31,7 +31,7 @@ signs.forEach(el => {
 })
 
 function googleForm() {
-  window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLScus2uKaA49bYkh8O_s9HtEL8Tr1ohcgqLVGkKVCR3bzgAZQA/viewform';
+  window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSeROUFw0iosd3xWHyAGFZoC45dAxv3d6y2H4goEDyxrCBbj5g/viewform';
 }
 
 function notifications() {
