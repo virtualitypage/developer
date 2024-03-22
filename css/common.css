@@ -79,7 +79,7 @@ span {
   border-left-color: rgb(34 34 34);
 }
 
-@media screen and (min-width: 940px) {
+@media (min-width: 769px) {
   .head {
     width: 100%;
     top: 0;
@@ -116,7 +116,7 @@ span {
   }
 }
 
-@media (max-width: 939px) {
+@media (max-width: 768px) {
   .nav_wrap { /* ナビの内包部 */
     position: absolute;
     top: 100%;

@@ -80,7 +80,7 @@ span {
   border-left-color: rgb(34 34 34);
 }
 
-@media screen and (min-width: 940px) {
+@media (min-width: 769px) {
   .head {
     width: 100%;
     top: 0;
@@ -123,7 +123,7 @@ span {
   }
 }
 
-@media (max-width: 939px) {
+@media (max-width: 768px) {
   .nav_wrap { /* ナビの内包部 */
     position: absolute;
     top: 70%;
@@ -284,7 +284,7 @@ p {
     color: rgb(255 255 255); /* 通常 */
     /* color: orange; ハロウィン仕様 */
     font-weight: bold;
-    font-size: 20px;
+    font-size: 25px;
     margin-bottom: 30px;
     text-decoration: underline;
   }
@@ -398,7 +398,7 @@ information-data
 
   .information-data .column {
     padding: 13px 0;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.6875;
     color: rgb(255 255 255);
   }
@@ -413,14 +413,14 @@ information-data
   }
 
   .information-data .bundle {
-    padding: 20px 0;
+    padding: 18px 0;
     font-size: 14px;
     line-height: 1.9285714286;
   }
 
   .bundle2 {
     padding: 20px 0;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 1.9285714286;
     flex-direction: row-reverse;
   }
@@ -474,28 +474,28 @@ information-data dt, dd, modified, unmodified
 @media (min-width: 769px) {
   .information-data dt {
     width: 170px;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
     color: rgb(255 255 255);
   }
 
   .information-data dd {
     width: calc(100% - 170px);
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
     color: rgb(255 255 255);
   }
 
   .modified {
     width: 170px;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
     color: rgb(0, 255, 0);
   }
 
   .unmodified {
     width: 170px;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
     color: rgb(255, 0, 0);
   }
