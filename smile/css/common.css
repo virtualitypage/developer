@@ -71,7 +71,8 @@ span {
 
 .nav_menu a {
   display: block;
-  padding: 1rem 1.25rem;
+  padding: 0.5rem 0.25rem;
+  margin-left: -25px;
   border-left: 4px solid transparent;
 }
 

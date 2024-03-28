@@ -12,7 +12,7 @@ html {
 body {
   margin: 0;
   font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "游ゴシック体", "Yu Gothic", YuGothic, Meiryo, メイリオ, "Noto Sans JP", sans-serif;
-  background: rgb(0 0 0)
+  background: rgb(0 0 0);
   -webkit-overflow-scrolling: touch;
   word-break: break-word;
   font-feature-settings: "palt";
