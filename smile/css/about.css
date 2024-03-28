@@ -4,7 +4,6 @@ body
 
 @import url("https://fonts.googleapis.com/css2?family=Epilogue&display=swap");
 html {
-  font-size: 62.5%;
   letter-spacing: 0.03em;
   /* line-height: 1.3rem; */
 }
@@ -12,10 +11,11 @@ html {
 body {
   margin: 0;
   font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "游ゴシック体", "Yu Gothic", YuGothic, Meiryo, メイリオ, "Noto Sans JP", sans-serif;
-  background: rgb(0 0 0);
-  -webkit-overflow-scrolling: touch;
-  word-break: break-word;
-  font-feature-settings: "palt";
+  background-color: rgb(4 255 229);
+  background: repeating-linear-gradient( to top,rgba(0, 238, 255, 0.06) 0px 2px,transparent 2px 4px ),linear-gradient(to bottom,rgb(7, 41, 38) 75%,rgb(0, 67, 61));
+  /* background: repeating-linear-gradient( to top,rgba(255,255,255,0.03) 0px 2px,transparent 2px 4px ),linear-gradient(to bottom,rgb(255 130 0) 75%,rgb(0 0 0)); */
+  /* background-size: 20px 2px; */
+  background-size: 20px 5px;
 }
 
 img {
@@ -38,7 +38,7 @@ header
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 10px;
+  margin: 15px;
 }
 
 .logo {
@@ -53,7 +53,7 @@ header
 }
 
 .nav_toggle-menu {
-  background: rgb(4 255 229);
+  background: rgb(240 103 255);
   position: absolute;
   right: 2rem;
   top: 21.5px;
@@ -64,6 +64,12 @@ a {
 }
 
 span {
+  font-size: 15px;
+  color: rgb(255 255 255);
+  font-weight: bold;
+}
+
+.nav_text {
   font-size: 20px;
   color: rgb(255 255 255);
   font-weight: bold;
@@ -80,7 +86,7 @@ span {
   border-left-color: rgb(34 34 34);
 }
 
-@media screen and (min-width: 940px) {
+@media (min-width: 769px) {
   .head {
     width: 100%;
     top: 0;
@@ -90,7 +96,7 @@ span {
   }
 
   .logo {
-    width: 200px;
+    width: 150px;
     padding-left: 20px;
   }
 
@@ -117,7 +123,7 @@ span {
   }
 }
 
-@media (max-width: 939px) {
+@media (max-width: 768px) {
   .nav_wrap { /* ナビの内包部 */
     position: absolute;
     top: 70%;
@@ -143,31 +149,48 @@ main
 ========================================================= */
 
 main {
-  padding-top: 30px;
+  padding-top: 90px;
   display: block;
   overflow: hidden;
 }
 
 img {
-  margin: 10%;
   width: 80%;
   display: block;
   margin: auto;
-}
-
-a {
-  text-decoration: none;
 }
 
 p {
   font-weight: bold;
   font-size: 20px;
   color: rgb(255 255 255);
+  margin-bottom: 10px;
 }
 
 .info {
   padding: 40px 0 20px;
   text-align: center;
+}
+
+/* 通常 */
+.cm-s-default {
+  color: white;
+  text-shadow: 0 0 2px rgb(16 12 15),0 0 35px #ffffff44,0 0 5px white,0 0 50px white;
+}
+
+/* ハロウィン仕様 */
+/* .cm-s-default {
+  color: rgb(255, 123, 0);
+  text-shadow: 0 0 20px rgb(255, 123, 0),0 0 35px rgb(255, 123, 0),0 0 5px rgb(255, 123, 0),0 0 50px darkorange;
+} */
+
+.store-name {
+  color: rgb(255 255 255); /* 通常 */
+  /* color: orange; ハロウィン仕様 */
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 60px;
+  text-decoration: underline;
 }
 
 .info > * {
@@ -239,22 +262,31 @@ p {
   line-height: 1;
 }
 
-@media (min-width: 769px) {
+@media screen and (min-width: 769px) {
   main {
-    padding-top: 60px;
+    padding-top: 120px;
     padding-left: 20px;
     padding-right: 20px;
     overflow: hidden;
   }
 
-  p {
-    font-weight: bold;
-    font-size: 25px;
-    color: rgb(255 255 255);
+  img {
+    width: 60%;
+    display: block;
+    margin: auto;
   }
 
   .info {
     padding: 50px 45px 30px;
+  }
+
+  .store-name {
+    color: rgb(255 255 255); /* 通常 */
+    /* color: orange; ハロウィン仕様 */
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 30px;
+    text-decoration: underline;
   }
 
   .info > * {
@@ -278,7 +310,7 @@ p {
   }
 
   .info-title {
-    padding: 5px 0 20px;
+    padding: 5px 0 0;
   }
 
   .info-title .en {
@@ -295,7 +327,6 @@ p {
     padding: 40px 0 20px;
     color: rgb(255 255 255);
   }
-
   .menu-title .en {
     font-size: 32px;
   }
@@ -316,7 +347,7 @@ information-data
 
 .information-data .column {
   padding: 10px 0;
-  border-top: 2px solid rgb(0 0 0);
+  /* border-top: 2px solid rgb(255 255 255); */
   border-bottom: 1px solid rgb(206 209 216);
   font-size: 15px;
   line-height: 1.8;
@@ -367,7 +398,7 @@ information-data
 
   .information-data .column {
     padding: 13px 0;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.6875;
     color: rgb(255 255 255);
   }
@@ -382,14 +413,14 @@ information-data
   }
 
   .information-data .bundle {
-    padding: 20px 0;
+    padding: 18px 0;
     font-size: 14px;
     line-height: 1.9285714286;
   }
 
   .bundle2 {
     padding: 20px 0;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 1.9285714286;
     flex-direction: row-reverse;
   }
@@ -404,7 +435,7 @@ p, table, blockquote, address, pre, iframe, form, figure, dl {
 }
 
 /* =========================================================
-information-data dt, dd
+information-data dt, dd, modified, unmodified
 ========================================================= */
 
 .information-data dt {
@@ -426,27 +457,65 @@ information-data dt, dd
   color: rgb(255 255 255);
 }
 
+.modified {
+  width: 115px;
+  font-weight: bold;
+  font-size: 15px;
+  color: rgb(0, 255, 0);
+}
+
+.unmodified {
+  width: 115px;
+  font-weight: bold;
+  font-size: 15px;
+  color: rgb(255, 0, 0);
+}
+
+.txt {
+  font-size: 15px;
+}
+
 @media (min-width: 769px) {
   .information-data dt {
     width: 170px;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
     color: rgb(255 255 255);
   }
+
   .information-data dd {
     width: calc(100% - 170px);
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
     color: rgb(255 255 255);
   }
+
+  .modified {
+    width: 170px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(0, 255, 0);
+  }
+
+  .unmodified {
+    width: 170px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(255, 0, 0);
+  }
+
+  .txt {
+    font-size: 20px;
+  }
+
   .information-data dd a {
-    font-size: 12px;
+    font-size: 20px;
     color: rgb(255 255 255);
   }
 
   .information-data dd a[href*=tel] {
     display: none;
-    color: rgb(255 255 255);
+    color:rgb(255 255 255);
   }
 }
 
@@ -456,22 +525,23 @@ information-data dt, dd
     align-items: center;
     color: rgb(255 255 255);
   }
-
-  .information-data dd br {
+/*  .information-data dd br {
     display: none;
     color: rgb(255 255 255);
   }
+}
 
   .information-data dd .txt {
     width: 65%;
     padding: 0 5% 0 0;
     color: rgb(255 255 255);
   }
+}
 
   .information-data dd .link {
     width: 35%;
     color: rgb(255 255 255);
-  }
+  } */
 }
 
 /* =========================================================
